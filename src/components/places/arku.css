@@ -1,0 +1,164 @@
+:root {
+  --primaryColor: hsl(26, 93%, 50%);
+  --HoverColor: hsl(26, 90%, 42%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --textColor: hsl(240, 1%, 48%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --greyBg: hsl(0, 0%, 96%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+  --box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.334);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--greyBg);
+  margin: 0;
+  padding: 0;
+}
+
+.reviews-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between reviews */
+}
+
+.review-card {
+  border: 1px solid #ccc; /* Light gray border for the review card */
+  border-radius: 8px; /* Rounded corners */
+  padding: 10px; /* Padding inside the card */
+  background-color: #f9f9f9; /* Light background color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px; /* Space between header and comment */
+}
+
+.review-user-icon {
+  margin-right: 10px; /* Space between icon and user name */
+  font-size: 20px; /* Icon size */
+}
+
+.review-comment {
+  font-style: italic; /* Italicize the comment for emphasis */
+  color: #555; /* Darker gray for comment text */
+}
+
+.review-rating {
+  margin-top: 5px; /* Space above rating */
+}
+
+.review-form {
+  margin-top: 20px; /* Space above the form */
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between form elements */
+}
+
+.review-form input,
+.review-form textarea,
+.review-form select {
+  padding: 10px; /* Padding inside inputs */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 16px; /* Font size for inputs */
+}
+
+.review-form textarea {
+  resize: vertical; /* Allow vertical resizing */
+  min-height: 80px; /* Minimum height for the textarea */
+}
+
+.review-form button {
+  padding: 10px;
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white; /* Text color */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.review-form button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.gallery-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.gallery-container .back-button-container {
+  padding: 1rem;
+  text-align: left;
+}
+.gallery-container .back-button-container .back-button {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--whiteColorDeam);
+  color: var(--blackColor);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+.gallery-container .back-button-container .back-button .icon {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+.gallery-container .back-button-container .back-button:hover {
+  background: var(--HoverColor);
+}
+.gallery-container .places-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+.gallery-container .places-grid .image-card {
+  background: var(--whiteColor);
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gallery-container .places-grid .image-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(178, 178, 178, 0.334);
+}
+.gallery-container .places-grid .image-card .image {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-bottom: 2px solid var(--primaryColor);
+}
+.gallery-container .places-grid .image-card .description {
+  padding: 1.5rem;
+  font-size: 0.95rem;
+  color: var(--textColor);
+  text-align: justify;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (min-width: 600px) {
+  .places-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+}
+@media (min-width: 900px) {
+  .places-grid {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+}
+@media (min-width: 1200px) {
+  .places-grid {
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  }
+}/*# sourceMappingURL=arku.css.map */

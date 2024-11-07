@@ -1,0 +1,166 @@
+:root {
+  --primaryColor: hsl(26, 93%, 50%);
+  --HoverColor: hsl(26, 90%, 42%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --textColor: hsl(240, 1%, 48%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --greyBg: hsl(0, 0%, 96%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+  --box-shadow: 0, 2px 8px 2px rgba(178, 178, 178, 0.334);
+}
+
+.allplaces-container {
+  padding-top: 15rem;
+  background-color: var(--greyBg);
+}
+.allplaces-container .back-button-container {
+  padding: 2rem;
+  text-align: left;
+}
+.allplaces-container .back-button-container .back-button {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--primaryColor);
+  color: var(--whiteColor);
+  border: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.allplaces-container .back-button-container .back-button .icon {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+  border: 5px;
+}
+.allplaces-container .back-button-container .back-button:hover {
+  background: var(--HoverColor);
+}
+.allplaces-container .allplaces-header {
+  text-align: center;
+  padding: 2rem 0;
+}
+.allplaces-container .allplaces-header .allplaces-title {
+  color: var(--blackColor);
+  font-size: 2rem;
+  padding-bottom: 0.5rem;
+}
+.allplaces-container .allplaces-header .allplaces-description {
+  color: var(--textColor);
+  font-size: 1rem;
+}
+.allplaces-container .places-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 0 2rem;
+}
+.allplaces-container .places-grid .place-card {
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.334);
+  transition: transform 0.3s ease-in-out;
+}
+.allplaces-container .places-grid .place-card:hover {
+  transform: translateY(-5px);
+}
+.allplaces-container .places-grid .place-card .place-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+.allplaces-container .places-grid .place-card .place-image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.allplaces-container .places-grid .place-card .place-image .overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+  transition: height 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.allplaces-container .places-grid .place-card .place-image .overlay h3 {
+  color: var(--whiteColor);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.allplaces-container .places-grid .place-card .place-image .overlay p {
+  color: var(--whiteColor);
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+.allplaces-container .places-grid .place-card .place-details {
+  padding: 1rem;
+  background: var(--whiteColor);
+}
+.allplaces-container .places-grid .place-card .place-details .place-title {
+  color: var(--blackColor);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.allplaces-container .places-grid .place-card .place-details .place-location {
+  color: var(--primaryColor);
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+.allplaces-container .places-grid .place-card .place-details .place-location .icon {
+  margin-right: 0.3rem;
+  font-size: 1rem;
+}
+.allplaces-container .places-grid .place-card .place-details .place-description {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: var(--textColor);
+}
+.allplaces-container .places-grid .place-card .place-details .arrow-icon {
+  display: flex;
+  justify-content: flex-end;
+}
+.allplaces-container .places-grid .place-card .place-details .arrow-icon .icon {
+  font-size: 2rem;
+  color: var(--primaryColor);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.allplaces-container .places-grid .place-card .place-details .arrow-icon .icon:hover {
+  color: var(--HoverColor);
+}
+.allplaces-container .places-grid .place-card:hover .place-image .overlay {
+  height: 100%;
+  padding: 1rem 1.5rem;
+}
+
+@media screen and (min-width: 480px) {
+  .allplaces-container {
+    padding-top: 10rem;
+  }
+}
+@media screen and (min-width: 720px) {
+  .allplaces-container {
+    padding-top: 7rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .allplaces-container {
+    padding-top: 10rem;
+  }
+  .allplaces-container .places-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+}/*# sourceMappingURL=allplaces.css.map */

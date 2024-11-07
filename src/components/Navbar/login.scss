@@ -1,0 +1,208 @@
+// // Define color variables
+// $primary-color: hsl(26, 93%, 50%);
+// $secondary-color: hsl(26, 90%, 42%);
+// $white-color: hsl(0, 0%, 100%);
+// $black-color: hsl(0, 0%, 18%);
+// $text-color: hsl(240, 1%, 48%);
+// $grey-bg: hsl(0, 0%, 96%);
+// $border-color: hsl(0, 0%, 80%);
+
+// // Login page container
+// .login-container {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 100vh;
+//   background: $grey-bg;
+    
+//   .login-form {
+//     background: $white-color;
+//     padding: 2rem;
+//     border-radius: 1rem;
+//     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+//     width: 400px;
+//     padding: 20px;
+//     justify-content: center;
+//     h2 {
+//       text-align: center;
+//       margin-bottom: 1.5rem;
+//       color: $black-color;
+//     }
+//     .input-group
+//     {
+//       justify-content: center;
+//       padding: 2px;
+//     }
+
+//     .form-group {
+//       margin-bottom: 1.5rem;
+
+//       label {
+//         display: block;
+//         margin-bottom: 0.5rem;
+//         color: $black-color;
+//         font-weight: 600;
+//       }
+
+//       input {
+//         width: 100%;
+//         padding: 0.75rem;
+//         border: 1px solid $border-color;
+//         border-radius: 0.5rem;
+//         font-size: 1rem;
+//         transition: border 0.3s;
+
+//         &:focus {
+//           border: 1px solid $primary-color;
+//           outline: none;
+//         }
+//       }
+//     }
+
+//     .login-btn {
+//       width: 100%;
+//       padding: 0.75rem;
+//       background: $primary-color;
+//       color: $white-color;
+//       border: none;
+//       border-radius: 0.5rem;
+//       font-size: 1rem;
+//       cursor: pointer;
+//       transition: background 0.3s;
+
+//       &:hover {
+//         background: $secondary-color;
+//       }
+//     }
+
+//     .footer-links {
+//       text-align: center;
+//       margin-top: 1rem;
+
+//       a {
+//         color: $primary-color;
+//         text-decoration: none;
+//         font-weight: 600;
+
+//         &:hover {
+//           text-decoration: underline;
+//         }
+//       }
+//     }
+//   }
+// }
+
+
+// @media screen and (max-width: 768px) {
+//   .login-container {
+//     .login-form {
+//       width: 90%;
+//       padding: 1.5rem;
+//     }
+//   }
+// }
+
+
+// login.scss
+
+// Define color variables
+$primary-color: hsl(26, 93%, 50%);
+$secondary-color: hsl(26, 90%, 42%);
+$white-color: hsl(0, 0%, 100%);
+$black-color: hsl(0, 0%, 18%);
+$grey-bg: hsl(0, 0%, 96%);
+$border-color: hsl(0, 0%, 80%);
+$shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+// Login popup styles
+.login-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6); // Semi-transparent background
+
+  .login-content {
+    background: $white-color;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: $shadow;
+    width: 400px; // Fixed width
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 24px;
+      cursor: pointer;
+      color: $black-color;
+
+      &:hover {
+        color: $secondary-color; // Change color on hover
+      }
+    }
+
+    h2 {
+      color: $black-color;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    form {
+      div {
+        margin-bottom: 1.5rem;
+
+        label {
+          display: block;
+          margin-bottom: 0.5rem;
+          color: $black-color;
+          font-weight: bold;
+        }
+
+        input {
+          width: 100%;
+          padding: 0.75rem;
+          border: 1px solid $border-color;
+          border-radius: 0.5rem;
+          background: $grey-bg;
+          transition: border 0.3s;
+
+          &:focus {
+            border-color: $primary-color; // Border color on focus
+            outline: none;
+          }
+        }
+      }
+
+      button {
+        width: 100%;
+        padding: 0.75rem;
+        background: $primary-color;
+        color: $white-color;
+        border: none;
+        border-radius: 0.5rem;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.3s;
+
+        &:hover {
+          background: $secondary-color; 
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .login-popup {
+    .login-content {
+      width: 90%; 
+      padding: 1.5rem;
+    }
+  }
+}

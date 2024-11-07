@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../../Assets"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "tripwebsite"
+	}
+}

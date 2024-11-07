@@ -1,0 +1,73 @@
+:root {
+  --primaryColor: hsl(26, 93%, 50%);
+  --HoverColor: hsl(26, 90%, 42%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --textColor: hsl(240, 1%, 48%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --greyBg: hsl(0, 0%, 96%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+  --box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.334);
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+.gallery-container .back-button {
+  grid-column: 1/-1;
+  background: var(--primaryColor);
+  color: var(--whiteColor);
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.gallery-container .back-button:hover {
+  background: var(--HoverColor);
+}
+.gallery-container .image-card {
+  background: var(--whiteColor);
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.334);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gallery-container .image-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px 4px rgba(178, 178, 178, 0.334);
+}
+.gallery-container .image-card .image {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.gallery-container .image-card .description {
+  padding: 1rem;
+  font-size: 1rem;
+  color: var(--textColor);
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .gallery-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .gallery-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .image-card .image {
+    height: 250px;
+  }
+  .image-card .description {
+    font-size: 1.1rem;
+  }
+}/*# sourceMappingURL=places.css.map */
